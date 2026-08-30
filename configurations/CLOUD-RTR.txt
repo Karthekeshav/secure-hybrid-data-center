@@ -1,0 +1,38 @@
+! Corrected cloud port assignment:
+! G0/0 = ISP WAN, G0/1 = CLOUD-SW1 trunk
+hostname CLOUD-RTR
+no ip domain-lookup
+
+interface GigabitEthernet0/1
+ no ip address
+ no shutdown
+interface GigabitEthernet0/1.120
+ encapsulation dot1Q 120
+ ip address 10.20.20.1 255.255.255.0
+ ip access-group APP_A_IN in
+interface GigabitEthernet0/1.130
+ encapsulation dot1Q 130
+ ip address 10.20.30.1 255.255.255.0
+interface GigabitEthernet0/1.150
+ encapsulation dot1Q 150
+ ip address 10.20.50.1 255.255.255.0
+interface GigabitEthernet0/1.160
+ encapsulation dot1Q 160
+ ip address 10.20.60.1 255.255.255.0
+interface GigabitEthernet0/0
+ ip address 172.16.0.5 255.255.255.252
+ no shutdown
+
+ip route 10.10.0.0 255.255.0.0 172.16.0.6
+ip route 192.0.2.0 255.255.255.0 172.16.0.6
+
+ip access-list extended APP_A_IN
+ permit icmp host 10.20.20.10 host 10.20.50.10
+ permit tcp host 10.20.20.10 host 10.20.50.10 eq 80
+ deny ip 10.20.20.0 0.0.0.255 10.20.30.0 0.0.0.255
+ deny ip 10.20.20.0 0.0.0.255 10.20.60.0 0.0.0.255
+ deny ip 10.20.20.0 0.0.0.255 10.10.30.0 0.0.0.255
+ deny ip 10.20.20.0 0.0.0.255 10.10.40.0 0.0.0.255
+ deny ip 10.20.20.0 0.0.0.255 10.10.50.0 0.0.0.255
+ deny ip 10.20.20.0 0.0.0.255 any
+

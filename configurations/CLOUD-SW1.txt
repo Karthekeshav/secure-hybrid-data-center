@@ -1,0 +1,28 @@
+! Sanitized reference configuration
+hostname CLOUD-SW1
+
+vlan 120
+ name APP_A
+vlan 130
+ name APP_B
+vlan 150
+ name MICROSERVICE
+vlan 160
+ name CLOUD_MGMT
+
+interface FastEthernet0/1
+ switchport mode access
+ switchport access vlan 120
+ spanning-tree portfast
+interface FastEthernet0/2
+ switchport mode access
+ switchport access vlan 130
+ spanning-tree portfast
+interface FastEthernet0/3
+ switchport mode access
+ switchport access vlan 150
+ spanning-tree portfast
+interface GigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 120,130,150,160
+

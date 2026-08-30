@@ -1,0 +1,12 @@
+# Packet Tracer temporary/backup files
+*.bak
+*.tmp
+
+# Office temporary files
+~$*.docx
+~$*.pptx
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+

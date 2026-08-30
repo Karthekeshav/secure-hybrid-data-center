@@ -1,0 +1,25 @@
+! Sanitized reference configuration
+hostname ISP-RTR
+no ip domain-lookup
+
+interface GigabitEthernet0/0
+ ip address 172.16.0.2 255.255.255.252
+ no shutdown
+interface GigabitEthernet0/1
+ ip address 172.16.0.6 255.255.255.252
+ no shutdown
+interface GigabitEthernet0/2
+ ip address 192.0.2.1 255.255.255.0
+ ip access-group REMOTE_FACULTY_IN in
+ no shutdown
+
+ip route 10.10.0.0 255.255.0.0 172.16.0.1
+ip route 10.20.0.0 255.255.0.0 172.16.0.5
+
+ip access-list extended REMOTE_FACULTY_IN
+ permit icmp host 192.0.2.10 host 10.10.20.10
+ permit tcp host 192.0.2.10 host 10.10.20.10 eq 80
+ deny ip 192.0.2.0 0.0.0.255 10.10.0.0 0.0.255.255
+ deny ip 192.0.2.0 0.0.0.255 10.20.0.0 0.0.255.255
+ deny ip 192.0.2.0 0.0.0.255 any
+
