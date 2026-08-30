@@ -1,9 +1,5 @@
 # Documentation
 
-This folder contains the detailed learning and build documentation for the project.
+The public project explanation is maintained in the repository's main `README.md`.
 
-- `Learning-Companion.docx`: what was built, why it works, UI guidance, troubleshooting, and viva preparation.
-- `Action-Only-Visual-Guide.docx`: exact build sequence and Packet Tracer actions.
-
-The documents distinguish implemented Packet Tracer controls from simulated cloud and Kubernetes concepts.
-
+The repository intentionally focuses on the completed Packet Tracer simulation, sanitized device configurations, addressing plan, screenshots, security evidence, and demonstration video.
