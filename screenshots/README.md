@@ -1,19 +1,16 @@
-# Screenshot checklist
+# Screenshot evidence
 
-Add clear screenshots with these filenames:
+This folder contains the completed Packet Tracer evidence set:
 
-1. `01-final-topology.png`
-2. `02-dc-vlans.png`
-3. `03-dc-trunk.png`
-4. `04-router-interfaces.png`
-5. `05-routing-table.png`
-6. `06-admin-ssh-success.png`
-7. `07-faculty-teaching-allowed.png`
-8. `08-faculty-database-blocked.png`
-9. `09-remote-faculty-allowed-blocked.png`
-10. `10-app-a-backend-allowed.png`
-11. `11-app-a-lateral-movement-blocked.png`
-12. `12-acl-counters.png`
+1. Final labelled topology
+2. DC and cloud VLAN assignments
+3. Operational DC and cloud trunks
+4. DC and cloud router interfaces
+5. DC and ISP routing tables
+6. Authorized administrator SSH
+7. Faculty allowed and blocked tests
+8. Remote-faculty allowed and blocked tests
+9. App-A backend access and lateral-movement denial tests
+10. Faculty, App-A, and remote-faculty ACL counters
 
-Crop screenshots to the relevant Packet Tracer window and avoid exposing personal information.
-
+The screenshots were captured from the final secured Packet Tracer checkpoint.

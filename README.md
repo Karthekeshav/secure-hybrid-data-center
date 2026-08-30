@@ -6,6 +6,8 @@
 
 A Cisco Packet Tracer cybersecurity project that connects a segmented private data center to a simulated public-cloud environment while enforcing least privilege, restricted administration, remote-faculty access, and lateral-movement containment.
 
+![Completed Packet Tracer topology](screenshots/01-final-topology.png)
+
 > **Important:** Packet Tracer implements the VLANs, routing, ACLs, HTTP services, local accounts, and SSH used in this project. Cloud VPCs, Security Groups, IAM, Kubernetes, and remote-access VPN are represented conceptually and are not claimed as native Packet Tracer services.
 
 ## Architecture
@@ -127,6 +129,24 @@ show access-lists
 show ip ssh
 ```
 
+## Evidence gallery
+
+- [DC VLAN configuration](screenshots/02-dc-vlans.png)
+- [DC 802.1Q trunk](screenshots/03-dc-trunk.png)
+- [Cloud VLAN configuration](screenshots/04-cloud-vlans.png)
+- [Cloud 802.1Q trunk](screenshots/05-cloud-trunk.png)
+- [DC router interfaces](screenshots/06-dc-router-interfaces.png)
+- [Cloud router interfaces](screenshots/07-cloud-router-interfaces.png)
+- [DC routing table](screenshots/08-dc-routing-table.png)
+- [ISP routing table](screenshots/09-isp-routing-table.png)
+- [Authorized admin SSH](screenshots/10-admin-ssh-success.png)
+- [Faculty teaching access allowed](screenshots/11-faculty-teaching-allowed.png)
+- [Faculty database access blocked](screenshots/12-faculty-database-blocked.png)
+- [Remote faculty access allowed](screenshots/14-remote-faculty-allowed.png)
+- [App-A backend access allowed](screenshots/16-app-a-backend-allowed.png)
+- [App-A to App-B blocked](screenshots/17-app-a-to-app-b-blocked.png)
+- [App-A ACL counters](screenshots/22-app-a-acl-counters.png)
+
 ## Implemented vs. simulated
 
 | Category | Features |
@@ -161,4 +181,3 @@ The credentials in the original classroom simulation are demonstration-only. The
 ## Author
 
 Created as part of the Cisco Virtual Internship 2026 Cyber Security project.
-
