@@ -1,6 +1,8 @@
 # Demonstration video
 
-Video link: **ADD YOUR YOUTUBE UNLISTED LINK HERE**
+[![Watch the project demonstration](https://img.youtube.com/vi/aJU4e1g-fmw/maxresdefault.jpg)](https://youtu.be/aJU4e1g-fmw)
+
+▶️ [Watch the complete demonstration on YouTube](https://youtu.be/aJU4e1g-fmw)
 
 Suggested title:
 
