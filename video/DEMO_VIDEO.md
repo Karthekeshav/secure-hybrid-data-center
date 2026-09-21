@@ -4,11 +4,11 @@
 
 ▶️ [Watch the complete demonstration on YouTube](https://youtu.be/aJU4e1g-fmw)
 
-Suggested title:
+Video title:
 
 > Secure Hybrid Data Center Security Architecture | Cisco Packet Tracer
 
-Suggested description:
+Project Overview:
 
 > Demonstration of a segmented private data center and simulated public-cloud architecture using VLANs, router-on-a-stick, static routing, extended ACLs, restricted SSH administration, remote-faculty controls, and compromised-application lateral-movement containment.
 
